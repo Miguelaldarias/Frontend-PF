@@ -1,0 +1,25 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Ignorar dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de compilación
+build/
+dist/
+
+# Ignorar archivos sensibles
+.env
+.DS_Store
+
+# Ignorar archivos de cache
+.cache/
+coverage/
+
+# Ignorar configuraciones locales
+.vscode/
+.idea/
+*.local
+*.env.local

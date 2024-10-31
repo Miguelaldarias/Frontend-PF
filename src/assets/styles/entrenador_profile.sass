@@ -1,0 +1,82 @@
+
+
+@import 'variables' // Importar las variables
+@import 'mixins' // Importar los mixins
+@import 'buttons' // Importar los botones
+
+.entrenador-profile
+  max-width: 1000px
+  margin: 0 auto
+  padding: $padding-base
+  background: url('../images/perfilentrenador.jpg') no-repeat center center
+  background-size: cover
+
+  .profile-info
+    background: rgba(255, 255, 255, 0.9)
+    padding: $padding-base
+    border: 1px solid $secondary-color
+    @include shadow
+    @include rounded(8px)
+    margin-bottom: $margin-base
+
+    h2
+      color: $primary-color
+      margin-bottom: $margin-base / 2
+
+    p
+      font-size: $font-size-base
+      margin-bottom: 8px
+
+  .clientes-asignados
+    margin-top: $margin-base
+
+    h3
+      color: $primary-color
+      margin-bottom: $margin-base / 2
+
+    .clientes-list
+      display: flex
+      flex-direction: column
+      gap: $margin-base
+
+      .cliente
+        background: white
+        padding: $padding-base
+        border: 1px solid $secondary-color
+        @include shadow
+        @include rounded(8px)
+        transition: transform 0.3s ease
+
+        &:hover
+          transform: translateY(-5px)
+
+        .cliente-header
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-bottom: $padding-base / 2
+
+          p
+            margin-bottom: 0
+            font-weight: 400
+
+          .btn-primary
+            @include button-primary
+
+        .acciones
+          margin-top: $padding-base
+          padding: $padding-base / 2
+          border-top: 1px solid $secondary-color
+
+          .metrica-form, .rutina-form, .plan-form
+            margin-bottom: $margin-base
+            input
+              width: 100%
+              padding: $padding-base / 2
+              margin-bottom: $padding-base / 2
+              border: 1px solid $secondary-color
+              border-radius: 4px
+
+            button
+              @include button-primary
+              width: 100%

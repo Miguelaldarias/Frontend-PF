@@ -1,0 +1,99 @@
+@import 'variables' // Importar las variables
+@import 'mixins' // Importar los mixins
+@import 'buttons' // Importar los botones
+
+.nosotros-container
+  padding: 2rem
+  background: #f9f9f9
+  h1
+    color: $primary-color
+  p
+@import 'variables' // Importar las variables
+@import 'mixins' // Importar los mixins
+@import 'buttons' // Importar los botones
+
+.nosotros-container
+  padding: 3rem
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2) // Fondo degradado
+  color: $text-color
+  text-align: center
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) // Sombra para darle profundidad
+
+  h1
+    font-size: 3rem
+    color: $primary-color
+    margin-bottom: 1.5rem
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) // Sombra de texto para darle un efecto resaltado
+
+  p
+    font-size: 1.2rem
+    margin-bottom: 2rem
+    line-height: 1.5
+    max-width: 800px
+    margin-left: auto
+    margin-right: auto
+    background: rgba(255, 255, 255, 0.7) // Fondo semitransparente para mejor legibilidad
+    padding: 1rem
+    border-radius: 10px
+
+.diferenciadores
+  background: rgba(255, 255, 255, 0.9) // Fondo blanco con transparencia para destacar el contenido
+  padding: 2rem
+  margin: 2rem auto
+  max-width: 1000px
+  border-radius: 15px
+  @include shadow
+
+  h2
+    font-size: 2.5rem
+    color: $primary-color
+    margin-bottom: 1rem
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+
+  p
+    font-size: 1.2rem
+    line-height: 1.5
+
+.entrenadores-destacados
+  margin-top: 4rem
+  text-align: center
+
+  h2
+    font-size: 2.5rem
+    color: $primary-color
+    margin-bottom: 2rem
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+
+  .entrenadores
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    gap: 2rem
+
+    .entrenador
+      background: rgba(255, 255, 255, 0.95) // Fondo blanco con transparencia para darle un look más elegante
+      width: 300px
+      padding: 1.5rem
+      border-radius: 15px
+      text-align: center
+      @include shadow
+      transition: transform 0.3s ease, box-shadow 0.3s ease
+
+      &:hover
+        transform: translateY(-5px)
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)
+
+      img
+        width: 100%
+        height: auto
+        border-radius: 10px
+        margin-bottom: 1rem
+
+      h3
+        font-size: 1.8rem
+        color: $primary-color
+        margin-bottom: 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.5

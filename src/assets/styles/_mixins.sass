@@ -1,0 +1,33 @@
+// Mixin para bordes redondeados
+@mixin rounded($radius: 8px)
+  border-radius: $radius
+
+// Mixin para sombras
+@mixin shadow
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+
+// Mixin para botones principales
+@mixin button-primary
+  background-color: $primary-color
+  color: white
+  padding: 10px 20px
+  border: none
+  @include rounded(4px)
+  cursor: pointer
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: darken($primary-color, 10%)
+
+@mixin button-secondary
+  background-color: $secondary-color
+  color: white
+  border: none
+  padding: 10px 20px
+  font-size: $font-size-base
+  border-radius: 8px
+  cursor: pointer
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: darken($secondary-color, 10%)

@@ -1,0 +1,80 @@
+
+@import 'variables' // Importar las variables
+@import 'mixins' // Importar los mixins
+@import 'buttons' // Importar los botones
+
+.cliente-profile
+  position: relative
+  min-height: 100vh
+  background: url('../images/Perfilclientes.jpg') no-repeat center center fixed
+  background-size: cover
+  padding: $padding-base
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.5) // Fondo oscuro semitransparente para resaltar el contenido
+
+  .content
+    position: relative
+    background: rgba(255, 255, 255, 0.9) // Fondo blanco con transparencia para diferenciarlo del fondo
+    padding: $padding-base
+    max-width: 800px
+    width: 100%
+    @include shadow
+    @include rounded(20px)
+
+    .profile-info
+      padding: $padding-base
+      border: 1px solid $secondary-color
+      @include shadow
+      @include rounded(8px)
+      margin-bottom: $margin-base
+
+      h2
+        color: $primary-color
+        margin-bottom: $margin-base / 2
+
+      p
+        font-size: $font-size-base
+        margin-bottom: 8px
+
+    .metricas, .rutinas, .planes
+      margin-top: $margin-base
+
+      h3
+        color: $primary-color
+        margin-bottom: $margin-base / 2
+
+      .item
+        background: white
+        padding: $padding-base
+        margin-bottom: $margin-base
+        border: 1px solid $secondary-color
+        @include shadow
+        @include rounded(8px)
+        transition: transform 0.3s ease
+
+        &:hover
+          transform: translateY(-5px)
+
+        p
+          margin-bottom: 6px
+          font-weight: 400
+
+      .btn-secondary
+        @include button-secondary
+        margin-bottom: $margin-base
+
+      .historial
+        margin-top: $margin-base / 2
+        .item
+          padding: $padding-base / 2
+          margin-bottom: $margin-base / 2
+          border-left: 3px solid $secondary-color-light
